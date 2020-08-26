@@ -5,7 +5,7 @@ import './components/components.css';
 import {Container,Col,Row} from 'react-bootstrap'
 import cx from 'classnames'
 
-import {Header,CurrentBalance,ExpenseIncome,Transactiion,AddTransaction} from './components'
+import {Header,ExpenseIncome,Transactiion,AddTransaction} from './components'
 import {TrasactionProvider} from './globalContext/Context'
 
 function App() {

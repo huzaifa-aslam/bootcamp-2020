@@ -3,7 +3,7 @@ import { globalContext } from "./../globalContext/Context";
 import './components.css'
 
 import { Form, Button } from "react-bootstrap";
-export const AddTransaction = () => {
+ const AddTransaction = () => {
   const [amount, setAmount] = useState(0);
   const [disc, setDisc] = useState("");
 
@@ -29,6 +29,9 @@ e.preventDefault()
 
     }
     addTransaction(transObj)
+    setAmount(0)
+    setDisc("")
+
 }
 
   return (
@@ -37,6 +40,7 @@ e.preventDefault()
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Enter Discription</Form.Label>
           <Form.Control
+          value={disc}
             required="required"
             type="text"
             onChange={getDisc}
@@ -48,6 +52,7 @@ e.preventDefault()
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Enter Amount</Form.Label>
           <Form.Control
+          value={amount}
             required="required"
             onChange={getValue}
             type="number"
@@ -62,3 +67,5 @@ e.preventDefault()
     </div>
   );
 };
+
+export default AddTransaction
