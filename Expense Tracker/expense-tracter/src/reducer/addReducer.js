@@ -2,14 +2,11 @@ import { initialTransaction } from "../globalContext/Context";
 
 const addReducer = (state, action) => {
   switch (action.type) {
-    // case "DELETE_TRANSACTION":
-    //   const deletedNotes = initialTransaction.filter(
-    //     (note) => note.id !== action.payload
-    //   );
-    //   return {
-    //     // ...state,
-    //     initialTransaction: deletedNotes,
-    //   };
+    case "DELETE_TRANSACTION":
+      const deletedNotes = initialTransaction.filter(
+        (note) => note.id !== action.payload
+      );
+      return deletedNotes
 
     //  case 'DELETE_TRANSACTION':
     //   const deletedNotes=state.filter(
